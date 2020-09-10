@@ -1,0 +1,3 @@
+health:
+    path: /app1
+    controller: App\Controller\HealthController

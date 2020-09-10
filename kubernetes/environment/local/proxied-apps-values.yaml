@@ -1,0 +1,5 @@
+ingressHostname: zoover.devops.raff
+certificateManagerLetsEncryptEnabled: false
+issuerName: zoover-letsencrypt-staging
+serviceType: ClusterIP
+ingressClass: contour

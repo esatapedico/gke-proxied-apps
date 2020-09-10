@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  python:
+    image: eu.gcr.io/zoover-assignment-rafael/zoover-python-app:latest
+
+  nginx:
+    image: eu.gcr.io/zoover-assignment-rafael/zoover-python-app-nginx:latest
+    ports:
+      - 9090:80
+    depends_on:
+      - python

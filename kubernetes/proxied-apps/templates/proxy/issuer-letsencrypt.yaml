@@ -1,0 +1,20 @@
+{{- if .Values.certificateManagerLetsEncryptEnabled }}
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: zoover-letsencrypt-staging
+spec:
+  acme:
+    # You must replace this email address with your own.
+    # Let's Encrypt will use this to contact you about expiring
+    # certificates, and issues related to your account.
+    email: {{ .Values.letsEncryptContactEmail }}
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      # Secret resource that will be used to store the account's private key.
+      name: zoover-letsencrypt-staging-account-key
+    solvers:
+      - http01:
+          ingress:
+            class: {{ .Values.ingressClass }}
+{{- end }}

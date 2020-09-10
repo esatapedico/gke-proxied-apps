@@ -1,0 +1,6 @@
+apiVersion: v2
+name: proxied-apps
+description: Rafael's Zoover DevOps Assignment - installs app1 and app2 and an ingress proxy that routes requests to them.
+type: application
+version: 0.1.0
+appVersion: 0.1.0

@@ -1,0 +1,13 @@
+[flake8]
+exclude=
+    .svn,
+    CVS,
+    .bzr,
+    .hg,
+    .gitm=,
+    __pycache__,
+    .venv,
+    build,
+    data_utils.egg-info,
+    dist
+max-line-length = 140

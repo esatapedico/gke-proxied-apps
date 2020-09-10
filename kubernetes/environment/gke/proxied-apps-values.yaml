@@ -1,0 +1,5 @@
+ingressHostname: "rafael-zoover-assignment.xyz"
+certificateManagerLetsEncryptEnabled: true
+issuerName: zoover-letsencrypt-production
+serviceType: LoadBalancer
+ingressClass: gce

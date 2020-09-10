@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  terraform:
+    image: hashicorp/terraform:0.13.2
+    working_dir: "/src/gke"
+    volumes:
+     - "./src:/src:delegated"
+     - "../secrets/google-cloud-service-acount-keyfile.json:/secrets/google-cloud-service-acount-keyfile.json:ro"
+    env_file:
+      - google-cloud-settings.env

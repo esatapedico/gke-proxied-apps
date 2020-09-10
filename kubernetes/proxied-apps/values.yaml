@@ -1,0 +1,9 @@
+# Default values for proxied-apps.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+ingressHostname: zoover.devops.raff
+certificateManagerLetsEncryptEnabled: false
+issuerName: zoover-letsencrypt-staging
+serviceType: ClusterIP
+letsEncryptContactEmail: ~
+ingressClass: contour

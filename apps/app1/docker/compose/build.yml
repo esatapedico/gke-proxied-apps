@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  php-fpm:
+    image: eu.gcr.io/zoover-assignment-rafael/zoover-php-app:latest
+
+  nginx:
+    image: eu.gcr.io/zoover-assignment-rafael/zoover-php-app-nginx:latest
+    ports:
+      - 8080:80
+    depends_on:
+      - php-fpm
